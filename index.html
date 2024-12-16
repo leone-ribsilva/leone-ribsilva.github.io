@@ -1,74 +1,132 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
     <head>
-        
-        <title>LRS Tech Solutions - Politica de Privacidade de Aplicativos</title>
-    
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=no"
+        />
+        <link rel="stylesheet" href="./normalize.css" />
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="link" href="./financeiro.png" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <title>Controle Financeiro</title>
+    </head>
     <body>
-     
-<h2>Política de Privacidade de Aplicativos</h2>
-
-<p>Essa política de privacidade se refere ao(s) aplicativo(s):</p>
-
-<ul>
-<li>Frases para namorados</li>
-<li>Mensagens de Natal</li>
-</ul>
-
-<p>Criado(s) por LRS Tech Solutions / Leone R. Silva</p>
-
-<p>Informações fornecidas pelo usuário</p>
-
-<p>As informações fornecidas dentro dos recursos dos aplicativos são armazenadas apenas para funcionamento do aplicativo.</p>
-
-<h5>Coleta automática de informações</h5>
-
-<p>Informações como estatísticas de instalação e utilização são coletadas para relatórios estratégicos, sem identificação pessoal.</p>
-
-<h5>Coleta de informações nãprecisas de localização em tempo real do dispositivo</h5>
-
-<p>Este aplicativo não faz a coleta de informações de localização em tempo real.</p>
-
-<h5>Acesso de informações por terceiros</h5>
-
-<p>As informações coletadas estatisticamente podem ser coletadas com terceiros em algumas situações, são elas:</p>
-
-<p>Exigido por lei</p>
-<p>Quando acreditamos de boa fé que a divulgação é necessária para proteger nossos direitos, proteger sua segurança ou a segurança de outras pessoas, investigar fraudes ou responder a uma solicitação do governo.</p>
-<p></p>Com nossos prestadores de serviços confiáveis que trabalham em nosso nome, não têm um uso independente das informações que divulgamos a eles e concordamos em aderir às regras estabelecidas nesta declaração de privacidade.<p></p>
-<p>Se eu (LRS Tech Solutions / Leone Ribeiro Silva) estiver envolvido em uma fusão, aquisição ou venda de todos ou de uma parte de seus ativos, você será notificado por e-mail e / ou um aviso destacado em nosso site sobre qualquer alteração na propriedade ou uso dessas informações, bem como quaisquer escolhas que você possa ter em relação a essas informações.</p>
-<p>Para anunciantes e redes de publicidade e empresas de análise de terceiros, conforme descrito na seção abaixo</p>
-
-<h5>Coleta de informações para publicidade</h5>
-
-<p>Trabalhamos com empresas de análise para nos ajudar a entender como o Aplicativo está sendo usado, como a frequência e a duração de uso. Trabalhamos com anunciantes e redes de publicidade de terceiros, que precisam saber como você interage com as publicidades fornecidas ajudando assim manter estes aplicativos gratuitos ou com valores bastante acessíveis.</p>
-
-<p>Informações coletadas pelo Aplicativo para publicidade, incluindo, mas não se limitando, o ID de identificação exclusivo do seu dispositivo móvel e seu número de telefone celular. Para proteger o anonimato dessas informações, usamos uma tecnologia de criptografia para ajudar a garantir que esses terceiros não possam identificá-lo pessoalmente. Esses terceiros também podem obter informações anônimas sobre outros aplicativos que você baixou para seu dispositivo móvel, os sites para celular que você visita, suas informações de localização não precisas (por exemplo, seu CEP) e outras informações de localização não precisas para ajudar a analisar e servir publicidade direcionada anônima no aplicativo e em outros lugares.</p>
-
-<h5>Dos direitos de exclusão</h5>
-
-<p>Desative todas as coletas de informações desinstalando o Aplicativo:  Você pode parar toda a coleta de informações pelo Aplicativo facilmente, desinstalando o Aplicativo. Você pode usar os processos de desinstalação padrão que podem estar disponíveis como parte de seu dispositivo móvel ou via mercado ou rede de aplicativos móveis. </p>
-
-<h5>Segurança</h5>
-
-<p>Estamos preocupados em proteger a confidencialidade de suas informações. Fornecemos proteções físicas, eletrônicas e processuais para proteger as informações que processamos e mantemos. Por favor, esteja ciente de que, embora nos empenhemos em fornecer segurança razoável para as informações que processamos e mantemos, nenhum sistema de segurança pode evitar todas as possíveis violações de segurança.</p>
-
-<h5>Alterações e Consentimento</h5>
-
-<p>Esta Política de Privacidade pode ser atualizada de tempos em tempos por qualquer motivo. Toda e qualquer alteração será publicada neste mesmo local. Recomenda-se que você consulte esta Política de Privacidade regularmente para quaisquer alterações, pois a instalação do aplicativo é considerado como aprovação de toda aceitação e as alterações das condições.</p>
-
-<h5>Sobre</h5>
-
-<p>Qualquer dúvida ou necessidade de alguma explicação mais detalhada entre em contato diretamente através deste site, na página de contato você tem um formulário de submissão de mensagem, ou envie um email diretamente para lrstechsolutions@gmail.com</p>
-
-
-<h5>LRS TECH SOLUTIONS</h5>
-
-<address>
-Rua Nova V, 1929, Aviação
-Abaetetuba – PA – Brasil
-CEP: 68440-000
-</address>
-
-    
-
-</body></html>
+        <form id="expense-form">
+            <h1>Controle Financeiro</h1>
+            <!-- <h2>Cadastre uma nova despesa</h2> -->
+            <label for="expense-type"></label>
+            <select id="expense-type" required>
+                <option value="" disabled selected>Tipo de despesa</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Saúde">Saúde</option>
+                <option value="Educação">Educação</option>
+                <option value="Vestuário">Vestuário</option>
+                <option value="Supermercado">Supermercado</option>
+                <option value="Outros">Outros</option>
+            </select>
+            <label for="expense-date"></label>
+            <input
+                type="text"
+                id="expense-date"
+                required
+                placeholder="Data da compra"
+                autocomplete="off"
+                onfocus="this.type='date'"
+                onblur="if(!this.value) this.type='text'"
+            />
+            <label for="payment-method"></label>
+            <select id="payment-method" required>
+                <option value="" disabled selected>Forma de pagamento</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="PIX">PIX</option>
+                <option value="C.Crédito">Cartão de Crédito</option>
+                <option value="C.Débito">Cartão de Débito</option>
+            </select>
+            <label for="expense-value"></label>
+            <input
+                type="text"
+                id="expense-value"
+                required
+                placeholder="Valor (R$)"
+                autocomplete="off"
+                inputmode="numeric"
+            />
+            <div id="credit-card-fields" class="hidden">
+                <label for="installments"></label>
+                <input
+                    type="number"
+                    id="installments"
+                    min="1"
+                    max="24"
+                    placeholder="Número de parcelas"
+                    autocomplete="off"
+                />
+                <label for="closing-date"></label>
+                <input
+                    type="text"
+                    id="closing-date"
+                    required
+                    placeholder="Data de fechamento da fatura"
+                    autocomplete="off"
+                    onfocus="this.type='date'"
+                    onblur="if(!this.value) this.type='text'"
+                />
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <!-- <div id="div-expense-table"> -->
+        <div id="div-expense-table">
+            <h2>Despesas Cadastradas</h2>
+            <div id="table-container">
+                <table id="expense-table">
+                    <thead>
+                        <tr>
+                            <th id="th0">Tipo</th>
+                            <th>Id</th>
+                            <th>Data</th>
+                            <th>Forma de pag.</th>
+                            <th>Nº de parcelas</th>
+                            <th>Fecham. fatura</th>
+                            <th>Valor R$</th>
+                            <th id="th6">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- </div> -->
+        <!-- Tabelas por mês -->
+        <div id="monthly-tables">
+            <h2>Despesas por mês</h2>
+            <label id="label-view-month" for="view-month"></label>
+            <input
+                onfocus="this.type='month'"
+                onblur="this.type='text'"
+                id="view-month"
+                placeholder="Selecione o mês/ano"
+                onchange="displayExpensesForSelectedMonth()"
+            />
+            <div id="div-monthly-tables">
+                <table id="monthly-expense-table">
+                    <thead>
+                        <tr>
+                            <th>Mês</th>
+                            <th>Id</th>
+                            <th>Tipo de despesa</th>
+                            <th>Valor(R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="monthly-expense-table-body"></tbody>
+                </table>
+                <!-- A tabela de despesas por mês será criada via JavaScript -->
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
